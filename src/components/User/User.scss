@@ -10,14 +10,28 @@
     $clr-primary-600 100%
   );
 
+  @include mq($bp-tablet, $until: $bp-desktop) {
+    grid-column: span 2;
+  }
+
+  @include mq($bp-desktop) {
+    grid-row: span 2;
+  }
+
   &__info {
     display: flex;
     align-items: center;
     gap: 1.25rem;
     padding: 2rem;
     background-color: $clr-card-user;
-
     border-radius: 0.9375rem;
+
+    @include mq($bp-desktop) {
+      flex-direction: column;
+      gap: 2.7rem;
+      align-items: flex-start;
+      padding-block: 2.3rem 5rem;
+    }
   }
 
   &__img {
@@ -25,6 +39,11 @@
     width: 4rem;
     border-radius: 50%;
     outline: 0.1875rem solid white;
+
+    @include mq($bp-tablet) {
+      height: 4.875rem;
+      width: 4.875rem;
+    }
   }
 
   &__name {
@@ -33,11 +52,19 @@
 }
 
 .input-container {
-  display: flex;
-  gap: 1.3rem;
-  justify-content: space-evenly;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
   padding-block: 1.5rem;
   border: none;
+
+  @include mq($bp-desktop) {
+    grid-template-columns: auto;
+    gap: 1.3rem;
+    padding: 0 2rem;
+    place-items: flex-start;
+    padding: 1.6rem 2rem;
+  }
 
   &__label {
     cursor: pointer;

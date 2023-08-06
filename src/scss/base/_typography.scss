@@ -22,6 +22,10 @@ body {
 
   &__name {
     font-size: 1.5rem;
+
+    @include mq($bp-desktop) {
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -32,12 +36,17 @@ body {
 
   &__time-current {
     font-size: 2rem;
+
+    @include mq($bp-tablet) {
+      font-size: 3.5rem;
+    }
   }
 
   &__time-previous {
     font-size: 0.9375rem;
     font-weight: 400;
     text-align: right;
+    color: $clr-primary-200;
   }
 }
 

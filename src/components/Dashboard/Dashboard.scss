@@ -3,5 +3,14 @@
 .dashboard {
   display: grid;
   gap: 1.5rem;
-  padding: 3rem get-clamp(1.25rem, 1.5rem, 20rem, 23.4375rem);
+  padding: 3rem get-clamp(1.15rem, 1.5rem, 20rem, 23.4375rem);
+
+  @include mq($bp-tablet) {
+    grid-template-columns: repeat(2, minmax(auto, 15.9375rem));
+  }
+
+  @include mq($bp-desktop) {
+    grid-template-columns: repeat(4, minmax(auto, 15.9375rem));
+    gap: 1.88rem get-clamp(1.3rem, 1.88rem, 64rem, 68.75rem);
+  }
 }

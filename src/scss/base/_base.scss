@@ -1,5 +1,7 @@
 @use "../abstracts/" as *;
 
 body {
+  display: grid;
+  place-content: center;
   background: $clr-primary-700;
 }

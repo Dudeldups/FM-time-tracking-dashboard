@@ -19,6 +19,10 @@
     }
   }
 
+  @include mq($bp-tablet) {
+    padding-top: 2.8rem;
+  }
+
   &__img {
     position: absolute;
     inset: 0 0 auto auto;
@@ -27,9 +31,13 @@
   }
 
   &__details {
-    padding: 1.75rem 1.5rem;
+    padding: 1.75rem get-clamp(1.1rem, 1.5rem, 20rem, 23.4375rem);
     background-color: $clr-primary-600;
     border-radius: 0.9375rem;
+
+    @include mq($bp-tablet) {
+      padding: 1.8rem 1.88rem 2rem;
+    }
   }
 
   &__menu-button {
@@ -47,5 +55,11 @@
 
   &__bottom {
     margin-top: 0.44rem;
+
+    @include mq($bp-tablet) {
+      margin-top: 1.56rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
