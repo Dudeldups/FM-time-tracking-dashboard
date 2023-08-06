@@ -25,11 +25,11 @@ Your users should be able to:
 
 ### Added features
 
-- Additional breakpoint for tablet
+- Additional breakpoint for tablet with 2 columns
 
 ### Links
 
-<!-- - [Solution on Frontend Mentor]() -->
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/reacttsscss-time-tracking-dashboard-Pcvoh76M6F)
 
 - [Live site](https://fm-time-tracking-dashboard-9000.netlify.app/)
 
@@ -37,7 +37,7 @@ Your users should be able to:
 
 #### Desktop
 
-![Solution]()
+![Solution](https://github.com/Dudeldups/FM-time-tracking-dashboard/blob/main/screenshots/solution.png)
 
 ## My process
 
