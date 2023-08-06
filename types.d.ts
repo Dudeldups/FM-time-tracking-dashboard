@@ -1,6 +1,7 @@
 type Timeframe = {
   current: number;
   previous: number;
+  [key: string]: number;
 };
 
 type Stat = {
@@ -11,6 +12,8 @@ type Stat = {
     monthly: Timeframe;
   };
 };
+
+type Timeframes = "daily" | "weekly" | "monthly";
 
 type UserData = {
   userName: string;

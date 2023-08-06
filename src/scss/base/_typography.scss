@@ -17,7 +17,7 @@ body {
   &__desc {
     font-size: 0.9375rem;
     font-weight: 400;
-    opacity: 0.8;
+    opacity: 0.82;
   }
 
   &__name {
@@ -38,5 +38,20 @@ body {
     font-size: 0.9375rem;
     font-weight: 400;
     text-align: right;
+  }
+}
+
+.input-container {
+  &__label {
+    font-weight: 400;
+    text-transform: capitalize;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &__input:not(:checked) + &__label {
+    color: $clr-primary-200;
   }
 }

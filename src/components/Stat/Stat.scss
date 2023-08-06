@@ -3,6 +3,13 @@
 .stat {
   padding-top: 2.4rem;
   background-color: $clr-card-work;
+  background: linear-gradient(
+    180deg,
+    $clr-card-work 0%,
+    $clr-card-work 80%,
+    rgba(#fff, 0) 80%,
+    rgba(#fff, 0) 100%
+  );
   border-radius: 0.9375rem;
 
   &__details {
