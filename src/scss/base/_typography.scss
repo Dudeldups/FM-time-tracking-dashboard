@@ -10,4 +10,33 @@
 
 body {
   font: 300 1.125rem "Rubik", sans-serif;
+  color: white;
+}
+
+.user {
+  &__desc {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    opacity: 0.8;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+  }
+}
+
+.stat {
+  &__title {
+    font-weight: 500;
+  }
+
+  &__time-current {
+    font-size: 2rem;
+  }
+
+  &__time-previous {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    text-align: right;
+  }
 }

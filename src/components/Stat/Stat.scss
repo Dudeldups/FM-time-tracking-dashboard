@@ -1,0 +1,25 @@
+@use "../../scss/abstracts" as *;
+
+.stat {
+  padding-top: 2.4rem;
+  background-color: $clr-card-work;
+  border-radius: 0.9375rem;
+
+  &__details {
+    padding: 1.75rem 1.5rem;
+    background-color: $clr-primary-600;
+    border-radius: 0.9375rem;
+  }
+
+  &__top,
+  &__bottom {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    margin-top: 0.44rem;
+  }
+}

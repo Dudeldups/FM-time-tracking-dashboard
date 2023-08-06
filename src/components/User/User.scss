@@ -1,0 +1,41 @@
+@use "../../scss/abstracts" as *;
+
+button {
+  background-color: transparent;
+  color: white;
+}
+
+/////////////////
+
+.user {
+  border-radius: 0.9375rem;
+  background-color: $clr-primary-600;
+  background-color: white;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2rem;
+    background-color: $clr-card-user;
+    border-radius: 0.9375rem;
+  }
+
+  &__img {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    outline: 0.1875rem solid white;
+  }
+
+  &__name {
+    margin-top: 0.25rem;
+  }
+
+  &__button-container {
+    display: flex;
+    gap: 1.3rem;
+    justify-content: space-evenly;
+    padding-block: 1.5rem;
+  }
+}
