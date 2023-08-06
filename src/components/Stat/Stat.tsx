@@ -25,6 +25,8 @@ export default function Stat({ stat, timeframe }: Props) {
       break;
   }
 
+  const { current, previous } = stat.timeframes[timeframe];
+
   return (
     <div className="stat" key={stat.title}>
       <article className="stat__details">
@@ -37,11 +39,9 @@ export default function Stat({ stat, timeframe }: Props) {
         </div>
 
         <div className="stat__bottom">
-          <p className="stat__time-current">
-            {stat.timeframes[timeframe].current}hrs
-          </p>
+          <p className="stat__time-current">{current}hrs</p>
           <p className="stat__time-previous">
-            Last {timeframeAsNoun} - {stat.timeframes[timeframe].previous}hrs
+            Last {timeframeAsNoun} - {previous}hrs
           </p>
         </div>
       </article>

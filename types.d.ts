@@ -13,8 +13,6 @@ type Stat = {
   };
 };
 
-type Timeframes = "daily" | "weekly" | "monthly";
-
 type UserData = {
   userName: string;
   avatar: string;

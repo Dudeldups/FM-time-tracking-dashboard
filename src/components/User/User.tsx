@@ -5,7 +5,7 @@ type Props = {
   avatar: string;
   stats: Stat[];
   timeframe: string;
-  setTimeframe: React.Dispatch<React.SetStateAction<Timeframes>>;
+  setTimeframe: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export default function User({
@@ -16,19 +16,18 @@ export default function User({
   setTimeframe,
 }: Props) {
   const inputs = Object.keys(stats[0].timeframes).map(cur => {
-    const current = cur as Timeframes;
     return (
-      <div key={current}>
+      <div key={cur}>
         <input
           className="sr-only input-container__input"
           type="radio"
           name="timeframe"
-          id={current}
-          checked={current === timeframe}
-          onChange={() => setTimeframe(current)}
+          id={cur}
+          checked={cur === timeframe}
+          onChange={() => setTimeframe(cur)}
         />
-        <label className="input-container__label" htmlFor={current}>
-          {current}
+        <label className="input-container__label" htmlFor={cur}>
+          {cur}
         </label>
       </div>
     );

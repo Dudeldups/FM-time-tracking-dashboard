@@ -8,12 +8,18 @@ type Props = {
 };
 
 export default function Dashboard({ userData }: Props) {
-  const [timeframe, setTimeframe] = useState("weekly");
+  const [timeframe, setTimeframe] = useState<string>("weekly");
 
   const { userName, avatar, stats } = userData;
 
   const allStats = stats.map(stat => {
-    return <Stat key={stat.title} stat={stat} timeframe={timeframe} />;
+    return (
+      <Stat
+        key={stat.title}
+        stat={stat}
+        timeframe={timeframe as keyof Stat["timeframes"]}
+      />
+    );
   });
 
   return (
